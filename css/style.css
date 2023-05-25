@@ -1,0 +1,294 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/DMSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/DMSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    background-color: hsl(29, 63%, 92%);
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 540px;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 182px;
+    background-color: hsl(10, 79%, 65%);
+    height: 125px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding-left: 32px;
+    padding-right: 40px;
+    padding-top: 32px;
+    padding-bottom: 28px;
+}
+
+.header__logo {
+    margin: auto 0;
+    width: 72px;
+    height: 48px;
+}
+
+.header__balance-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.header__balance-title {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.header__balance-summary {
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.card__wrapper {
+    background-color: hsl(38, 100%, 98%);
+    height: 512px;
+    border-radius: 20px;
+    padding-top: 34px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: 0.035em;
+    color: #382314;
+    margin-bottom: 20px;
+}
+
+.card__charts {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 226px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.card__chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 18px;
+}
+
+.card__chart:last-child {
+    margin-right: 0;
+}
+
+.bar {
+    width: 50px;
+    background: #EC755D;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+.bar:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.current-day {
+    background-color: #76B5BC;
+    ;
+}
+
+.tooltip {
+    position: absolute;
+    width: 76px;
+    height: 40px;
+    background: #382314;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: white;
+    padding-top: 10px;
+    display: none;
+}
+
+
+
+.card__chart p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #382314;
+}
+
+.card__line {
+    border: 1px solid #F7E9DC;
+    margin-bottom: 32px;
+}
+
+.card__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.card__total-caption {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    color: #382314;
+}
+
+.card__total-summary {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    color: #382314;
+}
+
+.card__percentage-increase {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #382314;
+}
+
+.card__last-month {
+    text-align: end;
+    margin-bottom: 8px;
+}
+
+.card__comparison-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #382314;
+}
+
+
+.attribution {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.attribution {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+    .wrapper {
+        width: 345px;
+    }
+
+    .header__wrapper {
+        margin-top: 68px;
+        height: 98px;
+        padding: 20px 26px 22px 19px;
+    }
+
+    .header__logo {
+        width: 60px;
+    }
+
+    .header__balance-title {
+        font-weight: 400;
+        font-size: 15px;
+
+    }
+
+    .header__balance-summary {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    .card__wrapper {
+        height: 420px;
+        padding-top: 22px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .card__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    .bar {
+        width: 32px;
+    }
+
+    .card__chart {
+        margin-right: 11px;
+    }
+
+    .card__charts {
+        height: 210px;
+        margin-bottom: 26px;
+    }
+
+    .card__line {
+        margin-bottom: 26px;
+    }
+
+    .card__total-caption {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .card__total-summary {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 39px;
+    }
+
+    .card__percentage-increase {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .card__comparison-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
