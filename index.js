@@ -23,7 +23,7 @@ fetch('data.json')
         bar.classList.add('current-day');
       }
 
-      bar.style.height = item.amount * 2 + 'px';
+      bar.style.height = item.amount * 3 + 'px';
       listItem.appendChild(bar);
       listItem.appendChild(label);
       listItem.appendChild(tooltip);
@@ -31,7 +31,7 @@ fetch('data.json')
       // Event listeners for tooltip
       listItem.addEventListener('mouseover', () => {
         tooltip.textContent = item.amount;
-        tooltip.style.bottom = (item.amount * 2 + 36) + 'px';
+        tooltip.style.bottom = (item.amount * 3 + 36) + 'px';
         console.log('$' + item.amount);
         tooltip.style.display = 'block';
       });
